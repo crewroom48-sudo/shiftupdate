@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "icon": "./icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
 
     "splash": {
       "image": "./splash-icon.png",
