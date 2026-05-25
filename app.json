@@ -3,22 +3,18 @@
     "name": "Preshift",
     "slug": "preshift",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./icon.png",
-    "userInterfaceStyle": "light",
 
-    "splash": {
-      "image": "./splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "extra": {
+      "eas": {
+        "projectId": "00422f5f-3a47-4234-b03f-34bfa1450462"
+      }
     },
 
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+      }
     }
   }
 }
