@@ -1,57 +1,20 @@
 workflows:
-
-  expo-android:
-
-    name: Expo Android Build
-
+  expo-apk:
+    name: Expo APK Build
     environment:
-
       node: latest
-
       groups:
-
         - expo
 
     scripts:
-
       - name: Install dependencies
+        script: npm install
 
-        script: |
+      - name: Install EAS CLI
+        script: npm install -g eas-cli
 
-          npm install
-
-      - name: Install Expo and EAS
-
-        script: |
-
-          npm install -g expo-cli eas-cli
-
-      - name: Verify Expo login
-
-        script: |
-
-          eas whoami
-
-      - name: Generate native project
-
-        script: |
-
-          npx expo prebuild --clean
-
-      - name: Initialize EAS
-
-        script: |
-
-          eas init --non-interactive
-
-      - name: Build Android
-
-        script: |
-
-          eas build -p android --non-interactive
+      - name: Build APK
+        script: eas build -p android --profile preview --non-interactive
 
     artifacts:
-
-      - "*.apk"
-
-      - "*.aab"
+      - "**/*.apk"
