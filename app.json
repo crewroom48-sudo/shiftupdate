@@ -2,7 +2,6 @@
   "expo": {
     "name": "Preshift",
     "slug": "preshift",
-    "owner": "robert-rosenberger",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./icon.png",
