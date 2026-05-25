@@ -7,14 +7,9 @@ workflows:
         - expo
 
     scripts:
-      - name: Install dependencies
-        script: npm install
-
-      - name: Install EAS CLI
-        script: npm install -g eas-cli
-
-      - name: Build APK
-        script: eas build -p android --profile preview --non-interactive
+      - npm install
+      - npm install -g eas-cli
+      - eas build -p android --profile preview --non-interactive
 
     artifacts:
       - "**/*.apk"
