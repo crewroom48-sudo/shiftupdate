@@ -1,15 +1,18 @@
 workflows:
-  expo-apk:
-    name: Expo APK Build
+  android-apk:
+    name: Android APK
+    max_build_duration: 60
     environment:
-      node: latest
-      groups:
-        - expo
+      node: 20
 
     scripts:
+      - rm -rf node_modules package-lock.json
       - npm install
-      - npm install -g eas-cli
-      - eas build -p android --profile preview --non-interactive
+      - npx expo install --fix
+      - npx expo doctor
+      - npx expo prebuild
+      - cd android
+      - ./gradlew assembleRelease
 
     artifacts:
-      - "**/*.apk"
+      - android/app/build/outputs/**/*.apk
