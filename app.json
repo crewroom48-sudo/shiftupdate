@@ -4,16 +4,17 @@
     "slug": "preshift",
     "version": "1.0.0",
 
-    "extra": {
-      "eas": {
-        "projectId": "00422f5f-3a47-4234-b03f-34bfa1450462"
-      }
-    },
-
     "android": {
+      "package": "com.preshift.app",
       "adaptiveIcon": {
         "foregroundImage": "./adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      }
+    },
+
+    "extra": {
+      "eas": {
+        "projectId": "00422f5f-3a47-4234-b03f-34bfa1450462"
       }
     }
   }
