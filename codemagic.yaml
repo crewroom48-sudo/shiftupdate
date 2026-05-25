@@ -1,0 +1,11 @@
+workflows:
+  expo-android:
+    name: Expo Android Build
+    max_build_duration: 60
+    environment:
+      node: 20
+    scripts:
+      - npm install
+      - npx expo export
+    artifacts:
+      - dist/**
