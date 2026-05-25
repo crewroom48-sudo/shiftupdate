@@ -4,21 +4,27 @@ workflows:
 
     environment:
       node: latest
+      groups:
+        - expo
 
     scripts:
       - name: Install dependencies
         script: |
           npm install
 
-      - name: Install Expo CLI
+      - name: Install Expo and EAS
         script: |
           npm install -g expo-cli eas-cli
+
+      - name: Verify Expo login
+        script: |
+          eas whoami
 
       - name: Generate native project
         script: |
           npx expo prebuild --clean
 
-      - name: Build Android app
+      - name: Build Android
         script: |
           eas build -p android --non-interactive
 
