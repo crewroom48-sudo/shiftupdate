@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "shift-v2-",
-    "slug": "snack-e4704fa8-9838-4f10-b533-1242f512c283",
+    "name": "Preshift",
+    "slug": "preshift",
+    "owner": "robert-rosenberger",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./icon.png",
@@ -20,7 +21,7 @@
 
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./adaptive-icon.png.png",
+        "foregroundImage": "./adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
